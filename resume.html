@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Navbar Styles */
+        nav {
+            width: 100%;
+            background-color: #1e90ff;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Main Content */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid #1e90ff;
+            margin: 120px 20px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e90ff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .resume-image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 1rem;
+            color: #888;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Resume Content -->
+    <div class="container">
+        <h1>My Resume</h1>
+
+        <div class="resume-image">
+            <!-- Replace the src with your resume image when available -->
+            <img src="your-resume-image.jpg" alt="Resume Image">
+        </div>
+
+        <div class="footer">
+            <p>Designed by Sumit Samantara</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

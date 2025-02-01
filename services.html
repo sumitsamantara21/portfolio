@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Sumit's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: black;
+            color: white;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            scroll-behavior: smooth;
+            /* Smooth scrolling */
+        }
+
+        header {
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            background: linear-gradient(90deg, rgba(30, 144, 255, 1), rgba(0, 0, 255, 1));
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            margin-right: 50px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a:hover {
+            color: black;
+            border-color: rgba(30, 144, 255, 0.7);
+            box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+        }
+
+        .showcase {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: black;
+            z-index: -1;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .services-container {
+            padding: 100px 100px;
+            background-color: #222;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .services-container h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: rgba(30, 144, 255, 1);
+        }
+
+        .service-category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .service-box {
+            background: rgba(30, 144, 255, 0.7);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: left;
+            font-size: 18px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .service-box:hover {
+            background: rgba(30, 144, 255, 1);
+            box-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
+        }
+
+        .service-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .service-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-box ul li {
+            margin: 10px 0;
+        }
+
+        .service-box ul li i {
+            margin-right: 10px;
+        }
+
+        .service-box ul li span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header with Sumit's Portfolio logo on the left and Navigation Links on the right -->
+    <header>
+        <div class="logo">Sumit's Portfolio</div>
+
+        <div class="nav-right">
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services-container">
+        <h1>My Services</h1>
+
+        <!-- Web Development Services -->
+        <div class="service-category">
+            <div class="service-box">
+                <h3>Web Development</h3>
+                <p>Complete solutions for both frontend and backend development</p>
+                <div class="service-detail">
+                    <h4>Frontend Development:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> HTML, CSS, JavaScript</li>
+                        <li><i class="fas fa-check"></i> Frameworks: React, Angular, Vue.js</li>
+                        <li><i class="fas fa-check"></i> Responsive design & cross-browser compatibility</li>
+                    </ul>
+                    <h4>Backend Development:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Server-side: Node.js, Python, Ruby, PHP</li>
+                        <li><i class="fas fa-check"></i> Databases: MySQL, MongoDB, PostgreSQL</li>
+                        <li><i class="fas fa-check"></i> API Development & Integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mobile App Development Services -->
+            <div class="service-box">
+                <h3>Mobile App Development</h3>
+                <p>Building apps for iOS and Android platforms with a focus on performance and design</p>
+                <div class="service-detail">
+                    <h4>iOS Development:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Swift & Objective-C Programming</li>
+                        <li><i class="fas fa-check"></i> App Store deployment & maintenance</li>
+                        <li><i class="fas fa-check"></i> UI/UX Design Optimization</li>
+                    </ul>
+                    <h4>Android Development:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Java & Kotlin Programming</li>
+                        <li><i class="fas fa-check"></i> Google Play Store deployment</li>
+                        <li><i class="fas fa-check"></i> API Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI/ML Engineering Services -->
+        <div class="service-category">
+            <div class="service-box">
+                <h3>AI/ML Engineering</h3>
+                <p>Developing intelligent solutions for data analysis, automation, and predictive modeling</p>
+                <div class="service-detail">
+                    <h4>Machine Learning Model Development:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Supervised & Unsupervised Learning</li>
+                        <li><i class="fas fa-check"></i> Model Training, Validation, and Deployment</li>
+                        <li><i class="fas fa-check"></i> TensorFlow, PyTorch, Scikit-learn</li>
+                    </ul>
+                    <h4>Data Analysis & Visualization:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Data Preprocessing & Cleaning</li>
+                        <li><i class="fas fa-check"></i> Predictive Modeling & Statistical Analysis</li>
+                        <li><i class="fas fa-check"></i> Visualization Tools: Matplotlib, Tableau</li>
+                    </ul>
+                    <h4>Automation Solutions:</h4>
+                    <ul>
+                        <li><i class="fas fa-check"></i> AI-driven Automation for Business Processes</li>
+                        <li><i class="fas fa-check"></i> Chatbot Development</li>
+                        <li><i class="fas fa-check"></i> Custom AI Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Offerings -->
+        <div class="service-category">
+            <div class="service-box">
+                <h3>Additional Offerings</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Technical Consultation</li>
+                    <li><i class="fas fa-check"></i> Code Reviews & Optimization</li>
+                    <li><i class="fas fa-check"></i> Ongoing Maintenance & Support</li>
+                    <li><i class="fas fa-check"></i> Workshops & Skill Enhancement Training</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+
+</html>
